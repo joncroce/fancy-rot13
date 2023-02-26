@@ -24,6 +24,7 @@ const copyButton = document.querySelector<HTMLButtonElement>('#copy-button');
 
 clearButton!.addEventListener('click', () => {
   inputEl!.value = '';
+  resultEl!.innerHTML = '';
 });
 
 copyButton!.addEventListener('click', async () => {
