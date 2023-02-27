@@ -60,11 +60,11 @@ select {
   min-height: 100vh;
   width: 100%;
   padding-inline: 1rem;
+  text-align: center;
 }
 
 .title {
   font-size: 3rem;
-  text-align: center;
 }
 
 .main {
@@ -87,4 +87,25 @@ select {
   display: flex;
   justify-content: center;
   gap: 1rem;
+}
+
+#toast {
+  display: inline-block;
+  margin-inline: auto;
+  padding: 0.25rem 0.5rem;
+  border-style: dotted;
+  border-width: 3px;
+  border-color: green;
+  color: purple;
+  font-family: system-ui;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+#toast[data-visible="false"] {
+  visibility: hidden;
+}
+
+#toast[data-visible="true"] {
+  visibility: show;
 }
