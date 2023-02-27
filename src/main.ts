@@ -3,18 +3,18 @@ import { rotate } from './rot13';
 import useToast from './useToast';
 
 document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
-  <h2 class='title'>ROT 13</h2>
+  <h2 class="title">ROT 13</h2>
   <section class="main">
     <textarea
-      id='input'
-      autocomplete='off'
+      id="input"
+      autocomplete="off"
       autofocus
     ></textarea>
-    <div id='result'></div>
+    <div id="result"></div>
   </section>
   <section class="controls">
-    <button id="clear-button" type='button'>Clear</button>
-    <button id="copy-button" type='button'>Copy</button>
+    <button id="clear-button" type="button">Clear</button>
+    <button id="copy-button" type="button">Copy</button>
   </section>
   <div id="toast" data-visible="false"></div>
 `;
