@@ -3,16 +3,26 @@ import { rotate } from './rot13';
 import useToast from './useToast';
 
 document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
-  <h2 class="title">ROT 13</h2>
-  <section class="main">
-    <textarea
-      id="input"
-      autocomplete="off"
-      autofocus
-    ></textarea>
-    <div id="result"></div>
+  <h2 class="title"><span class="italic">Fancy</span> ROT 13</h2>
+  <details>
+    <summary>Details</summary>
+    <p>An implementation of everyone's favorite no-security cryptographic algorithm that works with accented characters.</p>
+  </details>
+  <section id="rotater">
+    <label for="input">
+      Input
+      <textarea
+        id="input"
+        autocomplete="off"
+        autofocus
+      ></textarea>
+    </label>
+    <label for="output">
+      Output
+      <div id="output"></div>
+    </label>
   </section>
-  <section class="controls">
+  <section id="controls">
     <button id="clear-button" type="button">Clear</button>
     <button id="copy-button" type="button">Copy</button>
   </section>
@@ -20,7 +30,7 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
 `;
 
 const inputEl = document.querySelector<HTMLTextAreaElement>('#input');
-const resultEl = document.querySelector<HTMLDivElement>('#result');
+const resultEl = document.querySelector<HTMLDivElement>('#output');
 const clearButton = document.querySelector<HTMLButtonElement>('#clear-button');
 const copyButton = document.querySelector<HTMLButtonElement>('#copy-button');
 

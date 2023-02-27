@@ -65,40 +65,69 @@ select {
 
 .title {
   font-size: 3rem;
+  padding-block: 1rem;
 }
 
-.main {
-  padding-block: 1rem;
-  min-height: 50vh;
+details {
+  display: inline-block;
+  font-size: 1.1rem;
+}
+
+summary {
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.italic {
+  font-style: italic;
+}
+
+#rotater, #controls {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 1rem;
+}
+
+#rotater {
+  margin-block: 2rem 1rem;
   font-size: 1.5rem;
+  min-height: 50vh;
 }
 
-#input, #result {
-  padding: 0.125rem;
-  border: 1px solid black;
-  font-family: monospace;
-}
-
-.controls {
-  padding-block: 1rem;
+#rotater > label {
   display: flex;
-  justify-content: center;
-  gap: 1rem;
+  flex-direction: column;
+  gap: 0.25rem;
+  font-weight: 700;
+}
+
+#input, #output {
+  height: 100%;
+  padding: 0.25rem;
+  border: 1px solid;
+  font-family: monospace;
+  font-weight: 400;
+  text-align: left;
+}
+
+#input {
+  resize: none;
+}
+
+#controls > button {
+  font-size: 1.1rem;
+  
 }
 
 #toast {
   display: inline-block;
+  margin-block: 1rem;
   margin-inline: auto;
-  padding: 0.25rem 0.5rem;
+  padding: 0.4rem 1.1rem;
   border-style: dotted;
   border-width: 3px;
-  border-color: green;
-  color: purple;
   font-family: system-ui;
-  font-size: 1.1rem;
+  font-size: 1.4rem;
   font-weight: 600;
 }
 
