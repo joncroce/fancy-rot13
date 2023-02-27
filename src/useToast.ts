@@ -1,15 +1,20 @@
-const useToast = () => {
-	const el = document.querySelector<HTMLDivElement>('#toast');
-	const duration = 750;
-	let currentInterval: number | null = null;
+interface ToastOptions {
+	duration?: number;
+	elementId?: string;
+}
+
+const useToast = (options?: ToastOptions) => {
+	const el = document.getElementById(options?.elementId ?? 'toast');
+	const duration = options?.duration ?? 1000;
+	let currentIntervalId: number | null = null;
 
 	function start(text: string) {
 		setText(text);
 		setVisibility(true);
-		if (currentInterval) {
-			clearInterval(currentInterval);
+		if (currentIntervalId) {
+			clearInterval(currentIntervalId);
 		}
-		currentInterval = setInterval(stop, duration);
+		currentIntervalId = setInterval(stop, duration);
 	}
 
 	function stop() {
