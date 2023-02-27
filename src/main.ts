@@ -6,7 +6,7 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
   <h2 class="title"><span class="italic">Fancy</span> ROT 13</h2>
   <details>
     <summary>Details</summary>
-    <p>An implementation of everyone's favorite no-security cryptographic algorithm that works with accented characters.</p>
+    <p>An implementation of everyone's favorite no-security cryptographic algorithm that works with accented letters of the alphabet.</p>
   </details>
   <section id="rotater">
     <label for="input">
