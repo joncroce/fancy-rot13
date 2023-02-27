@@ -82,27 +82,40 @@ summary {
   font-style: italic;
 }
 
-#rotater, #controls {
+main {
+  margin-block: 2rem 1rem;
+  font-size: 1.5rem;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 100%;
   gap: 1rem;
 }
 
-#rotater {
-  margin-block: 2rem 1rem;
-  font-size: 1.5rem;
-  min-height: 50vh;
+@media (min-width: 600px) {
+  main {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 400px auto;
+  }
 }
 
-#rotater > label {
+main > .wrapper {
+  height: 100%;
   display: flex;
   flex-direction: column;
-  gap: 0.25rem;
   font-weight: 700;
 }
 
+main label {
+  flex: 1;
+  padding-block: 0.5rem;
+  font-weight: 700;
+  display: flex;
+  flex-direction: column;
+}
+
 #input, #output {
-  height: 100%;
+  flex: 1;
+  min-height: 140px;
+  width: 100%;
   padding: 0.25rem;
   border: 1px solid;
   font-family: monospace;
@@ -114,8 +127,8 @@ summary {
   resize: none;
 }
 
-#controls > button {
-  font-size: 1.1rem;
+button {
+  font-size: 1.3rem;
   
 }
 

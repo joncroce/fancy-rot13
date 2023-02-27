@@ -8,24 +8,26 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
     <summary>Details</summary>
     <p>An implementation of everyone's favorite no-security cryptographic algorithm that works with accented letters of the alphabet.</p>
   </details>
-  <section id="rotater">
-    <label for="input">
-      Input
-      <textarea
-        id="input"
-        autocomplete="off"
-        autofocus
-      ></textarea>
-    </label>
-    <label for="output">
-      Output
-      <div id="output"></div>
-    </label>
-  </section>
-  <section id="controls">
-    <button id="clear-button" type="button">Clear</button>
-    <button id="copy-button" type="button">Copy</button>
-  </section>
+  <main>
+    <div class="wrapper">
+      <label for="input">
+        Input
+        <textarea
+          id="input"
+          autocomplete="off"
+          autofocus
+        ></textarea>
+      </label>
+      <button id="clear-button" type="button">Clear</button>
+    </div>
+    <div class="wrapper">
+      <label for="output">
+        Output
+        <div id="output"></div>
+      </label>
+      <button id="copy-button" type="button">Copy</button>
+    </div>
+  </main>
   <div id="toast" data-visible="false"></div>
 `;
 
