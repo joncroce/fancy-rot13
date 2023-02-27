@@ -2,7 +2,6 @@
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
-
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -55,10 +54,16 @@ select {
   }
 }
 
+body {
+  background-color: #F9F9F9;
+}
+
 #app {
   min-height: 100dvh;
   min-height: 100vh;
   width: 100%;
+  max-width: 1200px;
+  margin-inline: auto;
   padding-inline: 1rem;
   text-align: center;
 }
@@ -93,7 +98,6 @@ main {
 @media (min-width: 600px) {
   main {
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: 400px auto;
   }
 }
 
@@ -107,20 +111,26 @@ main > .wrapper {
 main label {
   flex: 1;
   padding-block: 0.5rem;
-  font-weight: 700;
-  display: flex;
-  flex-direction: column;
 }
 
 #input, #output {
-  flex: 1;
-  min-height: 140px;
+  line-height: 1;
+  height: 12rem;
   width: 100%;
   padding: 0.25rem;
   border: 1px solid;
+  background-color: #FFF;
   font-family: monospace;
   font-weight: 400;
   text-align: left;
+  white-space: pre-wrap;
+  overflow-y: auto;
+}
+
+@media (min-width: 600px) {
+  #input, #output {
+    height: 16rem;
+  }
 }
 
 #input {
@@ -129,7 +139,6 @@ main label {
 
 button {
   font-size: 1.3rem;
-  
 }
 
 #toast {
